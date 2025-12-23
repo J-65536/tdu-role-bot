@@ -11,11 +11,13 @@
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"@cloudflare/workers-types": "^4.20251223.0",
 		"typescript": "^5.5.2",
 		"vitest": "~3.2.0",
 		"wrangler": "^4.56.0"
 	},
 	"dependencies": {
-		"discord-hono": "^0.20.1"
+		"discord-hono": "^0.20.1",
+		"tsx": "^4.21.0"
 	}
 }

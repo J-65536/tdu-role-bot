@@ -8,5 +8,18 @@
 	],
 	"observability": {
 		"enabled": true
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "tdu26-bot-db",
+			"database_id": "8fe13ee8-6e90-4b7a-934b-1d7937279e2f",
+			"remote": true
+		}
+	],
+	"triggers": {
+		"crons": [
+			"* * * * *"
+		]
+	},
 }

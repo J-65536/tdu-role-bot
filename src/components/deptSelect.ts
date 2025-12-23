@@ -1,9 +1,10 @@
 import { ComponentContext } from 'discord-hono';
+import { Bindings } from '../types';
 import { FACULTIES, YEAR_26_ROLE } from '../constants';
-import { getDeptComponents } from '../utils/deptComponents';
+import { getDeptComponents } from './deptComponents';
 import { addRolesIfNoneExists } from '../utils/roleManager';
 
-export const deptSelectHandler = async (c: ComponentContext) => {
+export const deptSelectHandler = async (c: ComponentContext<{ Bindings: Bindings }>) => {
   const selectedDeptValue = c.interaction.data?.values?.[0];
   const guildId = c.interaction.guild_id;
   const memberId = c.interaction.member?.user?.id;
@@ -39,7 +40,6 @@ export const deptSelectHandler = async (c: ComponentContext) => {
     await c.rest(
       'POST',
       '/webhooks/{application.id}/{interaction.token}',
-      // @ts-ignore
       [c.env.DISCORD_APPLICATION_ID, c.interaction.token],
       {
         content: result.message,

@@ -1,7 +1,7 @@
 import { CommandContext } from 'discord-hono';
-import { getDeptComponents } from '../../utils/deptComponents';
+import { getDeptComponents } from '../../components/deptComponents';
 
-export const rolePanelDept = (c: CommandContext) => {
+export const setupDept = (c: CommandContext) => {
   const components = getDeptComponents();
 
   return c.res({

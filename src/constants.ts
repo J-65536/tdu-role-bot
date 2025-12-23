@@ -1,4 +1,8 @@
-export const SETUP_ROLE_ID = '1452580987635630155';
+export const SERVER_RULES_TEXT = `
+ここにサーバールールが入る。
+`;
+
+export const VERIFIED_ROLE_ID = '1452580987635630155';
 
 export const YEAR_26_ROLE = {
   id: '1451248574229774336',

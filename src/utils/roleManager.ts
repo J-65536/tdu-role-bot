@@ -73,7 +73,7 @@ export const addRolesIfNoneExists = async (
   // 管理対象ロールを既に持っていたら拒否
   const alreadyHasManagedRole = currentRoles.some(id => allManagedRoleIds.includes(id));
   if (alreadyHasManagedRole) {
-    return { status: 'rejected', message: '学科・学系は一度しか選択できません。\n変更が必要な場合は、管理人にお問い合わせください。' };
+    return { status: 'rejected', message: 'この設定は一度しか変更できません。\n変更が必要な場合は、管理人にお問い合わせください。' };
   }
 
   // 持っていなければ付与
