@@ -51,7 +51,7 @@ export const deptSelectHandler = async (c: ComponentContext) => {
   c.executionCtx.waitUntil(task());
 
   return c.update().res({
-    content: '所属する学科・学系を選択するとロールが付与されます。選択のやり直しはできません。',
+    content: '所属する学科・学系を選択するとロールが付与されます。\n変更が必要な場合は、管理人にお問い合わせください。',
     components: getDeptComponents(),
   });
 };
